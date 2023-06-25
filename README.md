@@ -3,7 +3,7 @@
     Presence
 </h1>
 <p align="center">
-wanted.lol app for discord user presence monitoring
+wanted.lol app for discord user presence monitoring.
 </p>
 
 <p align="center">
