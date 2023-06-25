@@ -1,0 +1,33 @@
+{
+	"name": "wanted-lol-presence",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/main.ts",
+	"scripts": {
+		"start": "node ./dist/main.js",
+		"dev": "ts-node-dev ./src/main.ts",
+		"build": "tsc",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
+		"lint": "eslint . --ext .ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/cors": "^2.8.13",
+		"@types/node": "^16.11.5",
+		"@typescript-eslint/eslint-plugin": "^5.2.0",
+		"@typescript-eslint/parser": "^5.2.0",
+		"eslint": "^8.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"prettier": "^2.4.1",
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@types/express": "^4.17.13",
+		"cors": "^2.8.5",
+		"discord.js": "^13.2.0",
+		"dotenv": "^16.0.3",
+		"express": "^4.17.1"
+	}
+}
