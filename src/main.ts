@@ -60,15 +60,10 @@ const port = config.port
 app.use(cors())
 
 const client = new Client({
-	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES],
-	ws: {
-		properties: { $browser: 'Discord iOS' }
-	}
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES]
 })
 
 client.once('ready', () => {
-	client.user?.setActivity('wanted.lol', { type: 'STREAMING' })
-
 	console.log(`Logged in as ${client.user?.tag}!`)
 })
 
