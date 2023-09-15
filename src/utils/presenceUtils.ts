@@ -41,8 +41,15 @@ export async function getPresence(
 	config: any
 ): Promise<PresenceData> {
 	try {
-		const guild = await client.guilds.fetch(config.guildId as string)
-		if (!guild.members.cache.has(user)) {
+		const guilds = config.guildIds.map((guildId: string) =>
+			client.guilds.fetch(guildId)
+		)
+
+		const guild = await Promise.all(guilds).then((guilds) =>
+			guilds.find((guild) => guild.members.cache.has(user))
+		)
+
+		if (!guild) {
 			throw new Error('Member not found')
 		}
 
